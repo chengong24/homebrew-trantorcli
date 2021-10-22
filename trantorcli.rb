@@ -1,4 +1,4 @@
-class Trantor < Formula
+class Trantorcli < Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
   url "http://mxsl.oss-cn-hangzhou.aliyuncs.com/dist/trantor/trantor.0.18.3.tar.gz"
