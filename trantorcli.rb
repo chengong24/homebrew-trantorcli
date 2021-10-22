@@ -2,30 +2,14 @@ class Trantorcli < Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
   url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
-  version "0.18.4"
-  sha256 "006ab5ab76d54a5ad2e40fe7f5368b9e435e9cfcedc3f877e85f9db904f5ae44"
+  version "0.19.0"
+  sha256 "5730f8a475a6e3fc2741edd9c73b3ff7ba8d27ad8bf536092161011d29a0b590"
 
 #   depends_on "docker"
 
-  def buildExe()
-    <<~EOS
-      #!/bin/bash
-      if [ -z "$JAVA_HOME" ] ; then
-        JAVACMD=`which java`
-      else
-        JAVACMD="$JAVA_HOME/bin/java"
-      fi
-      export TRANTOR_HOME="#{prefix}"
-      export TRANTOR_CLI_VERSION="0.18.3"
-      exec "$JAVACMD" -jar "#{libexec}/trantor-cli.jar" "$@"
-    EOS
-  end
-
   def install
     # Remove windows files
-    lib.install Dir["lib/*"]
-    libexec.install Dir["libexec/*"]
-    (bin/"trantor").write buildExe()
+   prefix.install %w[bin completions conf lib]
   end
 
   test do
