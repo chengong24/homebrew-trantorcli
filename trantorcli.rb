@@ -3,11 +3,7 @@ class Trantorcli < Formula
   homepage "https://www.terminus.io/"
   url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
   version "0.19.0"
-  
-  resource "gli" do
-    url "https://rubygems.org/downloads/gli-2.17.1.gem"
-    sha256 "584d527f59c7f4911941776bd7ec733d3ab693e4fea35223816409083b1def3c"
-  end
+  sha256 "c5f267f95ce1a6ddd1b35ab174a0beab17ddceb6950daa73d548a10178edbbf3"
   
 #   depends_on "docker"
 
