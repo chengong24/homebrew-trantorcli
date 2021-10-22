@@ -5,7 +5,7 @@ class Trantorcli < Formula
   version "0.19.0"
   sha256 "c5f267f95ce1a6ddd1b35ab174a0beab17ddceb6950daa73d548a10178edbbf3"
   
-  resource "sha256" do
+  resource "gli" do
     sha256 "c5f267f95ce1a6ddd1b35ab174a0beab17ddceb6950daa73d548a10178edbbf3"
   end
   
