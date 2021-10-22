@@ -1,7 +1,7 @@
 class Trantorcli < Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
-  url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
+  url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz", :tag => '0.0.1'
   version "0.19.1"
   sha256 "c5f267f95ce1a6ddd1b35ab174a0beab17ddceb6950daa73d548a10178edbbf3"
   
