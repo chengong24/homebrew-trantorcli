@@ -1,9 +1,9 @@
-class Trantor < Formula
+class Trantorcli < Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
-  url "http://mxsl.oss-cn-hangzhou.aliyuncs.com/dist/trantor/trantor.0.18.3.tar.gz"
-  version "0.18.3"
-  sha256 "006ab5ab76d54a5ad2e40fe7f5368b9e435e9cfcedc3f877e85f9db904f5ae44"
+  url "http://mxsl.oss-cn-hangzhou.aliyuncs.com/dist/trantor/trantor.0.18.0.tar.gz"
+  version "0.18.1"
+  sha256 "c5f267f95ce1a6ddd1b35ab174a0beab17ddceb6950daa73d548a10178edbb3f"
 
 #   depends_on "docker"
 
@@ -16,7 +16,7 @@ class Trantor < Formula
         JAVACMD="$JAVA_HOME/bin/java"
       fi
       export TRANTOR_HOME="#{prefix}"
-      export TRANTOR_CLI_VERSION="0.18.3"
+      export TRANTOR_CLI_VERSION="0.18.0"
       exec "$JAVACMD" -jar "#{libexec}/trantor-cli.jar" "$@"
     EOS
   end
@@ -25,11 +25,11 @@ class Trantor < Formula
     # Remove windows files
     lib.install Dir["lib/*"]
     libexec.install Dir["libexec/*"]
-    (bin/"trantor").write buildExe()
+    (bin/"trantorcli").write buildExe()
   end
 
   test do
-    system "#{bin}/trantor", "version"
+    system "#{bin}/trantorcli", "version"
   end
 
 end
