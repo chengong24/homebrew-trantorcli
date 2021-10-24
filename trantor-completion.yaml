@@ -1,0 +1,77 @@
+name: trantor
+version: "0.0.1"
+about: "Trantor Command Line Utility"
+author: "hedy.he <hehan.hh@alibaba-inc.com>"
+args:
+  - help:
+      about: Display Trantor Command Line Utility Usage
+      long: help
+      takes_value: false
+  - verbose:
+      about: Print verbose execution debug info
+      short: V
+      long: Verbose
+      takes_value: false
+subcommands:
+  - platform:
+      about: local trantor management platform
+  - remote:
+      about: Store remote commands provider connection information
+      args:
+        - verbose:
+            about: Display all remote command providers
+            short: v
+            long: verbose
+            required: false
+            takes_value: false
+      subcommands:
+        - list:
+            about: Display all remote command providers
+        - add:
+            about: add remote command providers
+            args:
+              - alias:
+                  about: remote command provider alias
+                  takes_value: true
+                  index: 1
+              - provider:
+                  about: remote command provider address
+                  takes_value: true
+                  index: 2
+        - rename:
+            about: rename remote command provider
+            args:
+              - alias:
+                  about: remote command provider alias
+                  takes_value: true
+                  index: 1
+              - newAlias:
+                  about: remote command provider new alias
+                  takes_value: true
+                  index: 2
+        - remove:
+            about: remove remote command provider
+            args:
+              - alias:
+                  about: remote command provider alias
+                  takes_value: true
+                  index: 1
+  - connect:
+      about: connect remote service
+      args:
+        - alias:
+            about: Service alias pre-configured using the trantor remote command
+        - host:
+            short: h
+            long: host
+            takes_value: true
+            about: remote service host
+        - port:
+            short: p
+            long: port
+            takes_value: true
+            about: remote service port
+  - install:
+      about: install trantor Cli tripartite plugin
+  - uninstall:
+      about: uninstall trantor Cli tripartite plugin
