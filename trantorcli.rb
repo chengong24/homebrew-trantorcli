@@ -1,17 +1,21 @@
-class Trantorcli < Formula
+class Trantorcli< Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
   url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
-  version "0.19.0"
-  sha256 "5730f8a475a6e3fc2741edd9c73b3ff7ba8d27ad8bf536092161011d29a0b590"
+  version "0.19.6"
+  sha256 "4943132e22c63e423d1cdeacd572c335c6c3ac94f44a58899622cd054d10657a"
 
 #   depends_on "docker"
 
   def install
     # Remove windows files
-   prefix.install %w[bin completions conf lib]
+   prefix.install %w[bin conf lib]
+   zsh_completion.install "completions/zsh/_trantor"
+   bash_completion.install "completions/bash/trantor-completion.bash"
+   fish_completion.install "completions/fish/trantor-completion.fish"
   end
 
+  
   test do
     system "#{bin}/trantor", "version"
   end
