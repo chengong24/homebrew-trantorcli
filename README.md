@@ -11,7 +11,7 @@ https://github.com/Homebrew/homebrew-core/blob/master/Formula/anyenv.rb
 /usr/local/Homebrew/Library/Taps/chengong24/homebrew-trantorcli
 
 # 生成completion文件
-if [[ -n $(type cli-completion) ]]; then
+<!-- if [[ -n $(type cli-completion) ]]; then
   i "Generate completion file."
    生成 zsh completion
   cli-completion --zsh trantor-completion.yaml >trantor-cli/completions/zsh/_trantor
@@ -21,4 +21,6 @@ if [[ -n $(type cli-completion) ]]; then
   cli-completion --fish trantor-completion.yaml >trantor-cli/completions/fish/trantor-completion.fish
    生成 powershell completion
   cli-completion --powershell trantor-completion.yaml >trantor-cli/completions/powershell/trantor-completion.ps
-fi
+fi -->
+
+
