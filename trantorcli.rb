@@ -2,7 +2,7 @@ class Trantorcli< Formula
   desc "Terminus Trantor CLI"
   homepage "https://www.terminus.io/"
   url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
-  version "0.19.8"
+  version "0.19.9"
   sha256 "4943132e22c63e423d1cdeacd572c335c6c3ac94f44a58899622cd054d10657a"
 
 #   depends_on "docker"
