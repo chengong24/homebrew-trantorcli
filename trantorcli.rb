@@ -1,5 +1,5 @@
-class Trantor < Formula
-  desc "Terminus Trantor CLI"
+class Trantorcli < Formula
+  desc "Terminus Trantor CLIdfd"
   homepage "https://www.terminus.io/"
   url "https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/tools/cli/trantor-cli.latest.tar.gz"
   version "0.0.1-SNAPSHOT"
